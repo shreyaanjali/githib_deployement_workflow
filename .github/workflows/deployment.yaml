@@ -15,21 +15,21 @@ permissions:
 
 
 jobs:
-   build and deploy:
+   build_and_deploy:
       runs-on: ubuntu-latest 
       steps:
         - name: checkout repository
-        - uses: actions/checkout@v4
+          uses: actions/checkout@v4
         
         - name: Set up GitHub Pages
-        - uses: actions/configure-pages@v5
+          uses: actions/configure-pages@v5
 
         - name: upload static web page
-        - uses: actions/upload-pages-artifact@v3
+          uses: actions/upload-pages-artifact@v3
           with:
             path: '.'
 
         - name: Deploy to github Pages
-        - uses: actions/deploy-pages@v4            
+          uses: actions/deploy-pages@v4            
       
 
